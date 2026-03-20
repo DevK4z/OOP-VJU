@@ -7,6 +7,7 @@ class point {
         double x, y;
         point(double x = 0, double y = 0) : x(x), y(y) {}
 };
+// Hình chữ nhật được định nghĩa bởi tâm, chiều rộng và chiều cao
 class rectangle {
     public :
         point center;
@@ -23,24 +24,29 @@ class rectangle {
             };
         }
 };
+// Hình tròn được định nghĩa bởi tâm và bán kính
 class circle {
     public :
         point center;
         double radius;
         circle(point center, double radius) : center(center), radius(radius) {}
 };
+// Hàm tính khoảng cách bình phương giữa 2 điểm (tránh sqrt để tăng hiệu suất)
 double dist2(const point& a, const point& b) {
     return (a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y);
 }
+// Kiểm tra điểm có nằm trong hoặc trên vòng tròn không
 bool point_in_circle(const point& p, const circle& c) {
     return dist2(p, c.center) <= c.radius * c.radius;
 }
+// Kiểm tra hình chữ nhật có nằm hoàn toàn trong vòng tròn không
 bool rect_in_circle(const rectangle& r, const circle& c) {
     for (const auto& corner : r.corners()) {
         if (!point_in_circle(corner, c)) return false;
     }
     return true;
 }
+// Kiểm tra hình chữ nhật có giao với vòng tròn không
 bool rec_circle_overlap(const rectangle& r, const circle& c) {
     double half_w = r.width / 2.0;
     double half_h = r.height / 2.0;
@@ -50,11 +56,11 @@ bool rec_circle_overlap(const rectangle& r, const circle& c) {
 }
 lin { 
     fl;
-    circle c(point(150, 150), 75);
-    point p1(150, 100), p2(230, 100);
+    circle c(point(150, 150), 75); // Vòng tròn tâm (150, 150) bán kính 75
+    point p1(150, 100), p2(230, 100); // p1 trong, p2 ngoài
     cout << "Diem p1 " << (point_in_circle(p1, c) ? "T" : "F") << '\n';
     cout << "Diem p2 " << (point_in_circle(p2, c) ? "T" : "F") << '\n';
-    rectangle r1(150, 100, 60, 40), r2(240, 100, 100, 80);
+    rectangle r1(140, 90, 10, 10), r2(100, 50, 300, 200); // r1 nhỏ nằm trong, r2 lớn giao với vòng tròn
     cout << "rect_in_circle(r1): " << (rect_in_circle(r1, c) ? "T" : "F") << '\n';
     cout << "rect_circle_overlap(r2): " << (rec_circle_overlap(r2, c) ? "T" : "F") << '\n';
 }
