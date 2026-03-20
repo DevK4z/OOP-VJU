@@ -7,16 +7,16 @@ class nhanvien {
         string ten;
         double luongcoban, hesoluong;
     public :
-        static constexpr double LUONG_MAX = 500000000.0;
+        static constexpr double LUONG_MAX = 500000000.0; // constexpr cho phép sử dụng trong biểu thức hằng số
         nhanvien(string ten = "", double lcb = 0, double hsl = 0) : ten(ten), luongcoban(lcb), hesoluong(hsl) {}
-        string getTen() { return ten; }
+        string getTen() { return ten; } 
         double getLuongCoBan() { return luongcoban; }
         double getHeSoLuong() { return hesoluong; }
         void setTen(string t) { ten = t; }
         void setLuongCoBan(double lcb) { luongcoban = lcb; }
         void setHeSoLuong(double hsl) { hesoluong = hsl; }
         double tinhluong() {
-            return luongcoban * hesoluong;
+            return luongcoban * hesoluong; // Tính lương dựa trên lương cơ bản và hệ số lương
         }
         void inTTin() {
             cout << "Ten: " << ten << "\nLuong co ban: " << luongcoban << "\nHe so luong: " << hesoluong << "\nLuong: " << tinhluong() << "\n";
@@ -27,7 +27,7 @@ class nhanvien {
             return false;
         }
         double luongHienTai = tinhluong();
-        double luongMoi = luongHienTai + delta;
+        double luongMoi = luongHienTai + delta; // Tính lương mới sau khi tăng
         if (luongMoi > LUONG_MAX) {
             cout << "Khong the tang luong! Luong moi vuot LUONG_MAX (" << fixed << setprecision(0) << LUONG_MAX << ").\n";
             return false;
