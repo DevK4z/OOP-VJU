@@ -13,11 +13,11 @@
 This repository contains a collection of C++ source code developed as part of the OOP (CSE 3011) curriculum. The projects focus on mastering core programming paradigms, ranging from basic syntax to advanced architectural patterns.
 
 🛠 Tech Stack
-Language: C++11/14/17
+Language: C++17
 
 Compiler: GCC / Clang / MSVC
 
-Development Environment: VS Code / Visual Studio
+Development Environment: VS Code
 
 📂 Project Structure
 The repository is organized into modules representing different stages of the learning journey:
@@ -47,20 +47,28 @@ To compile and run the programs, ensure you have a C++ compiler installed (e.g.,
 
 Clone the repository:
 
-Bash
+```Bash
 git clone https://github.com/DevK4z/OOP-VJU.git
+```
+
 Navigate to a specific module:
 
-Bash
+```Bash
 cd OOP-VJU/OOP1
+```
+
 Compile the source file:
 
-Bash
+```Bash
 g++ main.cpp -o main
+```
+
 Execute the binary:
 
-Bash
+```Bash
 ./main
+```
+
 👨‍💻 Author
 KazTran
 
