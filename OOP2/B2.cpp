@@ -15,7 +15,7 @@ void solve2() {
 }
 void solve3() {
     int st = (6 * 3600) + (52 * 60);
-    int easy = (8 * 68) + 15, tempo = (7 * 68) + 12;
+    int easy = (8 * 60) + 15, tempo = (7 * 60) + 12;
     int tong = 2 * easy + 3 * tempo;
     int end = st + tong;
     cout << end / 3600 << ":" << (end % 3600) / 60 << '\n';
