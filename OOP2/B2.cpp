@@ -25,4 +25,5 @@ lin {
     solve1();
     solve2();
     solve3();
+    return 0;
 }
