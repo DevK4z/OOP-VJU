@@ -22,7 +22,7 @@ Development Environment: VS Code / Visual Studio
 📂 Project Structure
 The repository is organized into modules representing different stages of the learning journey:
 
-Plaintext
+```text
 OOP-VJU/
 ├── OOP1/           # Fundamentals: Classes, Objects, and Constructors
 ├── OOP2/           # Relationship: Inheritance and Composition
@@ -30,6 +30,7 @@ OOP-VJU/
 ├── OOP4/           # Advanced: Templates, STL, and Exception Handling
 ├── .gitignore      # Build artifacts and temporary files
 └── README.md       # Project documentation
+```
 🚀 Key Concepts Covered
 Encapsulation: Protecting data by using access specifiers (public, private, protected).
 
