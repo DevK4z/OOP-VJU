@@ -21,13 +21,13 @@ class LineSegment {
 private:
     Point d1, d2;
 public:
-    // Ham xay dung mac dinh: d1(8,5), d2(1,0)
+    // d1(8,5), d2(1,0)
     LineSegment() : d1(8, 5), d2(1, 0) {}
-    // Ham xay dung co doi so: LineSegment(Point d1, Point d2)
+    // LineSegment(Point d1, Point d2)
     LineSegment(Point d1, Point d2) : d1(d1), d2(d2) {}
-    // Ham xay dung 4 doi so: LineSegment(int x1, int y1, int x2, int y2)
+    // LineSegment(int x1, int y1, int x2, int y2)
     LineSegment(int x1, int y1, int x2, int y2) : d1(x1, y1), d2(x2, y2) {}
-    // Ham xay dung sao chep sau: LineSegment(LineSegment S)
+    // LineSegment(LineSegment S)
     LineSegment(const LineSegment& S) : d1(S.d1.getX(), S.d1.getY()), d2(S.d2.getX(), S.d2.getY()) {}
     void inp() {
         cout << "Nhap toa do cho diem d1:" << endl;
