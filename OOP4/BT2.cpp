@@ -35,7 +35,7 @@ public:
         cout << "Nhap toa do cho diem d2:" << endl;
         d2.inp();
     }
-    void out() const {
+    void out() {
         cout << "Doan thang: d1";
         d1.out();
         cout << " - d2";
