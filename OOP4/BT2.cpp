@@ -30,9 +30,9 @@ public:
     // LineSegment(LineSegment S)
     LineSegment(const LineSegment& S) : d1(S.d1.getX(), S.d1.getY()), d2(S.d2.getX(), S.d2.getY()) {}
     void inp() {
-        cout << "Nhap toa do cho diem d1:" << endl;
+        cout << "Nhap toa do cho diem d1:" << '\n';
         d1.inp();
-        cout << "Nhap toa do cho diem d2:" << endl;
+        cout << "Nhap toa do cho diem d2:" << '\n';
         d2.inp();
     }
     void out() {
@@ -40,7 +40,7 @@ public:
         d1.out();
         cout << " - d2";
         d2.out();
-        cout << endl;
+        cout << '\n';
     }
 };
 lin {
