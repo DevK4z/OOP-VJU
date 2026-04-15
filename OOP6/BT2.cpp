@@ -103,6 +103,9 @@ class QLCB {
             for (auto &cb : ds) delete cb;
             ds.clear();
         }
+        void ghifiledanhsach(ostream& fout) {
+            for (auto &cb : ds) cb -> ghifile(fout);
+        }
         ~QLCB() {
             for (auto &cb : ds) delete cb;
         }
@@ -118,10 +121,10 @@ void menu() {
 lin {
     fl;
     int n;
-    cout << "Nhap so luong can bo: ";
+    cout << "Nhap so luong can bo: " << '\n';
     cin >> n;
     QLCB qlcb;
-    while (true) {
+    while (n--) {
         menu();
         int chon;
         cout << "Nhap lua chon: ";
